@@ -1,0 +1,16 @@
+.component.fullWidthImage {
+
+	figure {
+		img {
+    	width: 100%;
+    }
+	}
+
+  figcaption {
+    margin-top: 20px;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: right; 
+  }
+
+}

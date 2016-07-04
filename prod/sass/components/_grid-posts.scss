@@ -1,0 +1,63 @@
+.component.posts {
+
+	.item {
+		display: block;
+		position: relative;
+		margin-bottom: 40px;
+		cursor: pointer;
+
+		&:before {
+			opacity: 0;
+			content: "";
+			z-index: -1;
+			position: absolute;
+			width: 107%;
+			height: 107%;
+			margin: -10px;
+			padding: 10px;
+			box-shadow: 2px 2px 5px 0px $grey;
+			transition: 0.3s;
+			background: $white;;
+		}
+
+		&:hover {
+			&:before {
+				opacity: 1;
+			}
+		}
+		
+		figure {
+			margin-bottom: 20px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.date {
+			margin-bottom: 6px;
+			font-size: 12px;
+			font-weight: 600;
+			letter-spacing: 0.1rem;
+			line-height: 16px;
+			color: $grey;
+			text-transform: uppercase;
+		}
+
+		.title {
+			margin-bottom: 6px;
+			font-size: 20px;
+			font-weight: 800;
+			line-height: 22px;
+			color: $charcoal;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 16px;
+			color: $charcoal;
+		}
+
+	}
+
+}

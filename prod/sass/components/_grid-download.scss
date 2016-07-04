@@ -1,0 +1,44 @@
+.component.download {
+
+	.item {
+		display: block;
+		position: relative;
+		margin-bottom: 40px;
+		
+		figure {
+			margin-bottom: 20px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.title {
+			margin-bottom: 6px;
+			font-size: 20px;
+			font-weight: 800;
+			line-height: 22px;
+			color: $charcoal;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 16px;
+			color: $charcoal;
+		}
+
+		a {
+			font-size: 12px;
+			font-weight: 600;
+			line-height: 16px;
+			color: $charcoal;
+			text-transform: uppercase;
+
+			&:hover {
+				color: $red;
+			}
+		}
+
+	}
+
+}

@@ -39,7 +39,7 @@ var gulp = require('gulp'),
   var PORT = 8000;
 
   // PATH ON THE DEVELOPMENT SERVER TO FTP FILES TO
-  var PROJECTSERVERPATH = 'test';
+  var PROJECTSERVERPATH = 'bernarvenet';
 
   // BROWSERS TO TARGET WHEN PREFIXING CSS.
   var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];

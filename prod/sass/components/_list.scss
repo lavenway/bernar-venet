@@ -1,0 +1,17 @@
+.component.list {
+
+	ul {
+		li {
+			line-height: 26px;
+
+			&.answer {
+				margin-bottom: 20px;
+			}
+
+			span {
+				font-weight: 600;
+			}
+		}
+	}
+
+}

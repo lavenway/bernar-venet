@@ -2,14 +2,151 @@
 * TYPOGRAPHY
 ****************************************/
 
-/* MAJESTIC BANNER */
-/*@font-face {
-  font-family: 'MajesticBanner';
-  src: url('../fonts/MajestiBanner-Medium.eot');
-  src: url('../fonts/MajestiBanner-Medium.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/MajestiBanner-Medium.woff') format('woff'),
-       url('../fonts/MajestiBanner-Medium.ttf')  format('truetype'),
-       url('../fonts/MajestiBanner-Medium.svg#MajesticBanner') format('svg');
+/* FUTURA PT */
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Light.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Book Oblique.ttf') format('truetype');
   font-weight: 400;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Demi.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Bold Oblique.ttf') format('truetype');
+  font-weight: 700;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Heavy.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+
+
+
+/*@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Light.eot');
+  src: url('../fonts/Futura PT Web Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Futura PT Web Light.woff') format('woff'),
+       url('../fonts/Futura PT Web Light.ttf')  format('truetype'),
+       url('../fonts/Futura PT Web Light.svg#FuturaPT') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Demi.eot');
+  src: url('../fonts/Futura PT Web Demi.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Futura PT Web Demi.woff') format('woff'),
+       url('../fonts/Futura PT Web Demi.ttf')  format('truetype'),
+       url('../fonts/Futura PT Web Demi.svg#FuturaPT') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Book.eot');
+  src: url('../fonts/Futura PT Web Book.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Futura PT Web Book.woff') format('woff'),
+       url('../fonts/Futura PT Web Book.ttf')  format('truetype'),
+       url('../fonts/Futura PT Web Book.svg#FuturaPT') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Book Oblique.eot');
+  src: url('../fonts/Futura PT Web Book Oblique.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Futura PT Web Book Oblique.woff') format('woff'),
+       url('../fonts/Futura PT Web Book Oblique.ttf')  format('truetype'),
+       url('../fonts/Futura PT Web Book Oblique.svg#FuturaPT') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Medium.eot');
+  src: url('../fonts/Futura PT Web Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Futura PT Web Medium.woff') format('woff'),
+       url('../fonts/Futura PT Web Medium.ttf')  format('truetype'),
+       url('../fonts/Futura PT Web Medium.svg#FuturaPT') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Bold.eot');
+  src: url('../fonts/Futura PT Web Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Futura PT Web Bold.woff') format('woff'),
+       url('../fonts/Futura PT Web Bold.ttf')  format('truetype'),
+       url('../fonts/Futura PT Web Bold.svg#FuturaPT') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Bold Oblique.eot');
+  src: url('../fonts/Futura PT Web Bold Oblique.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Futura PT Web Bold Oblique.woff') format('woff'),
+       url('../fonts/Futura PT Web Bold Oblique.ttf')  format('truetype'),
+       url('../fonts/Futura PT Web Bold Oblique.svg#FuturaPT') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('../fonts/Futura PT Web Heavy.eot');
+  src: url('../fonts/Futura PT Web Heavy.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Futura PT Web Heavy.woff') format('woff'),
+       url('../fonts/Futura PT Web Heavy.ttf')  format('truetype'),
+       url('../fonts/Futura PT Web Heavy.svg#FuturaPT') format('svg');
+  font-weight: 800;
   font-style: normal;
 }*/

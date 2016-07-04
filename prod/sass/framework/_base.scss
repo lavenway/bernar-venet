@@ -14,12 +14,13 @@ html {
 }
 
 body {
-  font-size: 100%;
-  color: $black;
+  font: 18px 'FuturaPT', sans-serif;
+  font-weight: normal;
+  color: $charcoal;
   -webkit-tap-highlight-color: transparent;
   @include font-smoothing();
   text-rendering: optimizeLegibility;
-  background: yellow;
+  background: $lightgrey;
 }
 
 a {
@@ -43,6 +44,16 @@ strong {
   font-weight: 700; 
 }
 
+p {
+  font-size: 18px;
+  line-height: 26px;
+
+  .standfirst & {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
 
 /******************************
 * HEADER STYLES
@@ -52,46 +63,307 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 42px;
-  font-size: 4.2rem;
+  padding-bottom: 20px;
+  font-size: 36px;
   line-height: 36px;
-  line-height: 3.6rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size: 20px;
-  font-size: 2rem;
-  line-height: normal;
+  padding-bottom: 12px;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 26px;
+
+  .subtitle & {
+    font-size: 42px;
+    font-weight: normal;
+    line-height: 42px;
+    text-align: center;
+    text-transform: none;
+  }
 }
 
 h3 {
-  font-size: 35px;
-  font-size: 3.5rem;
-  line-height: 25px;
-  line-height: 2.5rem;
+  font-size: 32px;
+  line-height: 32px;
 }
 
 h4 {
-  font-size: 20px;
-  font-size: 2rem;
-  line-height: 25px;
-  line-height: 2.5rem;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 28px;
 }
 
 h5 {
   font-size: 24px;
-  font-size: 2.4rem;
-  line-height: 34px;
-  line-height: 3.4rem;
-  @include font-smoothing();
+  line-height: 24px;
+  color: $charcoal;
 }
 
 h6 {
-  font-size: 20px;
-  font-size: 2rem;
-  line-height: 24px;
-  line-height: 2.4rem;
-  @include font-smoothing();
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+/******************************
+* HEADER
+******************************/
+.navbar-default {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 40px 0 80px;
+  text-align: center;
+  box-shadow: none;
+  transition: .6s;
+  background: $white;
+
+  &.slideOutUp {
+    padding: 20px 0;
+    background: $black;
+
+    .logo {
+      margin-top: 0;
+      color: $white;
+    }
+
+    .language {
+      opacity: 0;
+      margin-bottom: 12px;
+      font-size: 0;
+      line-height: normal;
+    }
+
+    .links {
+      li a {
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .language {
+    float: right;
+    opacity: 1;
+    margin-bottom: 38px;
+    font-size: 12px;
+    line-height: 24px;
+    transition: .6s;
+
+    select {
+      appearance: none;
+      border: none;
+      outline: none;
+      background: transparent;
+
+      option {
+        appearance: none; 
+        color: $white;
+        background: $black;
+      }
+    }
+
+  }
+
+  .logo {
+    margin-top: 48px;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 48px;
+    color: $black;
+    transition: .6s;
+  }
+
+  .links {
+    clear: both;
+    display: block;
+    font-size: 20px;
+
+    li {
+      display: inline-block;
+      margin-left: 20px;
+
+      a {
+        display: block;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 18px;
+        color: $grey;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  } 
+}
+
+
+/******************************
+* STRUCTURE
+******************************/
+#wrapper {
+  margin-top: 214px;
+
+  .container {
+    max-width: 916px;
+
+    .row.white {
+      background: $white;
+    }
+  }
+
+  .component {
+    margin-bottom: 40px;
+  }
+
+  .bg-white {
+    background: $white;
+  }
+}
+
+
+/******************************
+* FORMS
+******************************/
+form {
+
+  .form-field {
+    margin-top: 20px;
+
+    &.error {
+      input, select, textarea {
+        color: $red;
+        border-color: $red;
+      }
+
+      .required {
+        color: $red;
+      }
+    }
+  }
+
+  label {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+
+    .required {
+      float: right;
+      font-size: 12px;
+      font-weight: normal;
+      text-transform: none;
+    }
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid $formgrey;
+  }
+
+}
+
+
+/******************************
+* HOME PAGE
+******************************/
+.home {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .fullpage {
+    height: 100%;
+  }
+
+  #fullpagelanding {
+    display: none;
+  }
+
+  .backstretch {
+    img{
+      animation: scaling 50s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes scaling {
+      from {
+          transform: scale(1.0);
+      }
+      to {
+          transform: scale(2.0);
+      }
+    }
+  }
+
+  .navbar-default {
+    background: transparent;
+
+    .language, .logo, .links a {
+      color: #fff;
+    }
+
+  }
+
+  .share {
+    display: none;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+  }
+
+}
+
+
+/******************************
+* FOOTER
+******************************/
+footer {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  margin-top: 40px;
+  background: $black;
+
+  .footer-nav-container {
+    margin-top: 18px;
+    font-size: 11px;
+
+    span, ul {
+      display: inline-block;
+    }
+
+    span {
+      color: $grey;
+    }
+
+    a {
+      margin-left: 10px;
+      padding-left: 10px;
+      color: $white;
+      border-left: 1px solid $white;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
 }
 
 
@@ -99,6 +371,8 @@ h6 {
 * TEMPLATE SPACING
 ******************************/
 .push {
+  clear: both;
+
   &.h20 { height: 20px; }
   &.h25 { height: 25px; }
   &.h40 { height: 40px; }
@@ -125,9 +399,14 @@ h6 {
   opacity: 0.2;
   overflow: hidden;
 
-  div span {
-    display: block;
-    height: 2000px;
-    background: red;
+  .container {
+    max-width: 916px;
+
+    div span {
+      display: block;
+      height: 2000px;
+      background: red;
+    }
   }
+
 }
