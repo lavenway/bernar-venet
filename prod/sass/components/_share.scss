@@ -7,7 +7,7 @@
 	}
 	
 	ul {
-		margin: 0;
+		margin-top: 12px;
 
 		li {
 			display: inline-block;
@@ -17,13 +17,18 @@
 				display: block;
 				width: 30px;
 				height: 30px;
-				font-size: 0;
 				border-radius: 50%;
 				background: $charcoal;
+				color: $white;
 
 				&:hover {
 					background: $red;
 				}
+
+				i {
+					line-height: 30px;
+				}
+
 			}
 		}
 	}

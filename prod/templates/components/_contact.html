@@ -1,53 +1,93 @@
 <div class="component contact">
-	<form>
+	<form class="invalid"><!--CLASSNAMES FORM CONTACT FORM 7 CAN BE failed, invalid, or sent  -->
 
 		<div class="row">
 
 			<div class="col-xs-12 col-sm-6">
 
-				<div class="form-field error">
+				<div class="form-field">
 					<label>First name<span class="required">Required</span></label>
-					<input type="text" name="firstname">
+					<span class="wpcf7-form-control-wrap">
+						<input class="wpcf7-not-valid" type="text" name="firstname">
+						<span role="alert" class="wpcf7-not-valid-tip">The field is required.</span>
+					</span>
+					<div class="icons">
+						<i class="err fa fa-remove"></i>
+						<i class="ok fa fa-check"></i>
+					</div>
 				</div>
 
 				<div class="form-field">
 					<label>Last name<span class="required">Required</span></label>
-					<input type="text" name="lastname">
+					<span class="wpcf7-form-control-wrap">
+						<input type="text" name="lastname">
+						<span role="alert" class="wpcf7-not-valid-tip">The field is required.</span>
+					</span>
+					<div class="icons">
+						<i class="err fa fa-remove"></i>
+						<i class="ok fa fa-check"></i>
+					</div>
 				</div>
 
 				<div class="form-field">
 					<label>Company/Publication</label>
-					<input type="text" name="company">
+					<span class="wpcf7-form-control-wrap">
+						<div class="select-wrapper">
+							<select>
+							  <option value="one">Lorem ipsum one</option>
+							  <option value="two">Lorem ipsum two</option>
+							  <option value="three">Lorem ipsum three</option>
+							  <option value="four">Lorem ipsum four</option>
+							</select>
+							<i class="fa fa-chevron-down"></i>
+						</div>
+					</span>
 				</div>
 
 				<div class="form-field">
 					<label>Email</label>
-					<input type="text" name="email">
+					<span class="wpcf7-form-control-wrap">
+						<input type="text" name="email">
+					</span>
+					<div class="icons">
+						<i class="err fa fa-remove"></i>
+						<i class="ok fa fa-check"></i>
+					</div>
 				</div>
 
 				<div class="form-field">
 					<label>Telephone</label>
-					<input type="text" name="telephone">
+					<span class="wpcf7-form-control-wrap">
+						<input type="text" name="telephone">
+					</span>
+					<div class="icons">
+						<i class="err fa fa-remove"></i>
+						<i class="ok fa fa-check"></i>
+					</div>
 				</div>
 
 			</div>
 
 			<div class="col-xs-12 col-sm-6">
-				<p class="push h20"></p>
-
-				<label>Comments<span class="required">Required</span></label>
-				<textarea name="comments" rows="18" cols="30"></textarea>
-
+				<div class="form-field">
+					<label>Comments<span class="required">Required</span></label>
+					<span class="wpcf7-form-control-wrap">
+						<textarea name="comments" rows="18" cols="30"></textarea>
+						<span role="alert" class="wpcf7-not-valid-tip">The field is required.</span>
+					</span>
+					<div class="icons">
+						<i class="err fa fa-remove"></i>
+						<i class="ok fa fa-check"></i>
+					</div>
+				</div>
 			</div>
 
 		</div>
 
-		<p class="push h20"></p>
+		<p class="push h60"></p>
+
+		<include src="../components/_button-form-input.html"></include>
 
 	</form>
-
-	<p class="push h20"></p>
-
-	<include src="../components/_button.html"></include>
 
 </div>

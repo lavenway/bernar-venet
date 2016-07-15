@@ -25,6 +25,7 @@ body {
 
 a {
   color: $blue;
+
   &:hover, &:focus, &:active {
     color: $black;
   }
@@ -119,92 +120,186 @@ h6 {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 40px 0 80px;
+  padding: 80px 0;
   text-align: center;
   box-shadow: none;
   transition: .6s;
   background: $white;
 
+  &.menu-active {
+    padding: 20px 0;
+
+    .pull-right {
+
+      .links ul {
+        display: block;
+      }
+
+    }
+
+  }
+
   &.slideOutUp {
     padding: 20px 0;
     background: $black;
 
-    .logo {
-      margin-top: 0;
-      color: $white;
+    .pull-left {
+      .logo {
+        margin-top: 0;
+        color: $white;
+      }
     }
 
+    .pull-right {
+
+      .language {
+        opacity: 0;
+        margin-bottom: 12px;
+        font-size: 0;
+        line-height: normal;
+      }
+
+      .links {
+
+        .menu {
+          color: $white;
+        }
+
+        li a {
+          color: $white;
+
+          &:hover {
+            color: $grey;
+          }
+        }
+      }
+    }
+
+  }
+
+  .pull-left {
+    z-index: 1;
+    position: relative;
+    width: auto;
+
+    .logo {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 38px;
+      color: $black;
+      transition: .6s;
+
+      @media (min-width: $tablet) {    
+        font-size: 48px;
+        line-height: 48px;
+      }
+
+    }
+  }
+  
+  .pull-right {
+    position: relative;
+    width: 100%;
+    margin-top: -34px;
+
     .language {
-      opacity: 0;
-      margin-bottom: 12px;
-      font-size: 0;
-      line-height: normal;
+      position: absolute;
+      top: -62px;
+      right: 0;
+      min-width: 68px;
+      opacity: 1;
+      font-size: 14px;
+      line-height: 24px;
+
+      select {
+        appearance: none;
+        border: none;
+        outline: none;
+        background: transparent;
+
+        option {
+          appearance: none; 
+          color: $white;
+          background: $black;
+        }
+      }
+
     }
 
     .links {
-      li a {
-        &:hover {
-          color: $white;
-        }
+      clear: both;
+      float: right;
+      width: 100%;
+      font-size: 20px;
+      text-align: center;
+
+      @media (min-width: $desktop) {    
+        text-align: right;
       }
-    }
-  }
 
-  .language {
-    float: right;
-    opacity: 1;
-    margin-bottom: 38px;
-    font-size: 12px;
-    line-height: 24px;
-    transition: .6s;
-
-    select {
-      appearance: none;
-      border: none;
-      outline: none;
-      background: transparent;
-
-      option {
-        appearance: none; 
-        color: $white;
-        background: $black;
-      }
-    }
-
-  }
-
-  .logo {
-    margin-top: 48px;
-    font-size: 42px;
-    font-weight: 800;
-    line-height: 48px;
-    color: $black;
-    transition: .6s;
-  }
-
-  .links {
-    clear: both;
-    display: block;
-    font-size: 20px;
-
-    li {
-      display: inline-block;
-      margin-left: 20px;
-
-      a {
+      .menu {
         display: block;
-        font-size: 15px;
-        font-weight: 600;
-        line-height: 18px;
-        color: $grey;
-        text-transform: uppercase;
+        float: right;
+        width: 40px;
+        height: 40px;
+        margin-top: -6px;
+        cursor: pointer;
 
-        &:hover {
-          color: $black;
+        @media (min-width: $tablet) {    
+          margin-top: -10px;
+        }
+
+        @media (min-width: $desktop) {    
+          display: none;
+        }
+
+        i {
+          font-size: 30px;
+          line-height: 40px;
+        }
+
+      }
+
+      ul {
+        display: none;
+        clear: both;
+        float: left;
+        width: 100%;
+
+        @media (min-width: $desktop) {    
+          display: block;
+        }
+
+        li {
+          display: block;
+
+          @media (min-width: $desktop) {    
+            display: inline-block;
+            margin-left: 20px;
+          }
+
+          a {
+            display: block;
+            padding: 20px 0;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 18px;
+            color: $grey;
+            text-transform: uppercase;
+
+            @media (min-width: $desktop) {    
+              padding: 0;
+            }
+
+            &:hover {
+              color: $black;
+            }
+          }
         }
       }
     }
-  } 
+
+  }
 }
 
 
@@ -212,7 +307,7 @@ h6 {
 * STRUCTURE
 ******************************/
 #wrapper {
-  margin-top: 214px;
+  margin-top: 208px;
 
   .container {
     max-width: 916px;
@@ -237,18 +332,84 @@ h6 {
 ******************************/
 form {
 
-  .form-field {
-    margin-top: 20px;
+  &.invalid {
 
-    &.error {
-      input, select, textarea {
-        color: $red;
-        border-color: $red;
+    .form-field {
+
+      .wpcf7-form-control-wrap {
+
+        .wpcf7-not-valid-tip {
+          display: block;
+        }
+
+        .wpcf7-not-valid {
+          border: 1px solid $red;
+
+          ~ .icons {
+            i.err {
+              display: block;
+              color: $red;
+            }
+          }
+        }
+
       }
 
       .required {
-        color: $red;
+        display: none;
       }
+
+    }
+  
+  }
+
+  &.failed {
+
+  }
+
+  &.sent {
+
+    .wpcf7-mail-sent-ok {
+      background: $charcoal;
+    }
+
+    i.ok {
+      display: block;
+    }
+
+  }
+
+  .wpcf7-validation-errors,
+  .wpcf7-mail-sent-ng {
+    margin: 0;
+    padding: 20px;
+    color: $white;
+    text-align: center;
+    border: none;
+    background: $red;
+  }
+
+  .form-field {
+    position: relative;
+    margin-top: 20px;
+
+    .wpcf7-not-valid-tip {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 12px;
+      line-height: 28px;
+      color: $red;
+    }
+
+    i {
+      display: none;
+      position: absolute;
+      right: 10px;
+      top: 39px;
+      font-size: 26px;
+      color: $charcoal;
     }
   }
 
@@ -270,6 +431,29 @@ form {
     width: 100%;
     padding: 12px 10px;
     border: 1px solid $formgrey;
+  }
+
+  input, textarea {
+    padding-right: 40px;
+  }
+
+  .select-wrapper {
+    background: $white;
+
+    select {
+      z-index: 1;
+      position: relative;
+      appearance: none;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    i {
+      display: block;  
+      top: 44px;
+      font-size: 18px;
+    }
+
   }
 
 }
@@ -308,10 +492,18 @@ form {
   }
 
   .navbar-default {
-    background: transparent;
+    background: rgba($grey, 0.5);
 
-    .language, .logo, .links a {
-      color: #fff;
+    .pull-left {
+      .logo {
+        color: #fff;
+      }
+    }
+
+    .pull-right {
+      .language, .links a, .menu {
+        color: #fff;
+      }
     }
 
   }
@@ -336,16 +528,20 @@ form {
 footer {
   position: relative;
   width: 100%;
-  height: 48px;
+  height: auto;
   margin-top: 40px;
   background: $black;
 
   .footer-nav-container {
-    margin-top: 18px;
-    font-size: 11px;
+    padding: 20px 0;
+    font-size: 13px;
 
     span, ul {
-      display: inline-block;
+      display: block;
+
+      @media (min-width: $tablet) {    
+        display: inline-block;
+      }
     }
 
     span {
@@ -353,10 +549,13 @@ footer {
     }
 
     a {
-      margin-left: 10px;
-      padding-left: 10px;
       color: $white;
-      border-left: 1px solid $white;
+
+      @media (min-width: $tablet) {    
+        margin-left: 10px;
+        padding-left: 10px;
+        border-left: 1px solid $white;
+      }
 
       &:hover {
         color: $red;
