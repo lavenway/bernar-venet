@@ -2,14 +2,16 @@
 
 	ul {
 		li {
+			margin-bottom: 20px;
 			line-height: 26px;
-
-			&.answer {
-				margin-bottom: 20px;
-			}
 
 			span {
 				font-weight: 600;
+
+				&.answer {
+					display: block;
+					font-weight: normal;
+				}
 			}
 		}
 	}

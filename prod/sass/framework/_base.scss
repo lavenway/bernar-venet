@@ -24,10 +24,10 @@ body {
 }
 
 a {
-  color: $blue;
+  color: $red;
 
   &:hover, &:focus, &:active {
-    color: $black;
+    color: $charcoal;
   }
 }
 
@@ -183,7 +183,7 @@ h6 {
     width: auto;
 
     .logo {
-      font-size: 32px;
+      font-size: 26px;
       font-weight: 800;
       line-height: 38px;
       color: $black;
@@ -319,6 +319,10 @@ h6 {
 
   .component {
     margin-bottom: 40px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
   }
 
   .bg-white {
@@ -519,6 +523,14 @@ form {
     margin: 0;
   }
 
+}
+
+
+/******************************
+* FOOTER
+******************************/
+#tribe-events-pg-template {
+    max-width: none;
 }
 
 
